@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOXX</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/helpers/reset.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <div id="app">
+        <div class="startScreen" v-if='startScreen' style="display: none;">
+            <div class="button" @click='startGame'>START</div>
+        </div>
+        <!--  v-if='startScreen == false && gameScreen' -->
+        <div class="gameScreen">
+            <div class="top">
+                <div class="scoreBar">
+                    <div class="x">X</div>
+                    <div class="xScore">10</div>
+                    <div class="vs">
+                        <div class="" style="margin: 0 auto">VS</div>
+                    </div>
+                    <div class="oScore">8</div>
+                    <div class="o">O</div>
+                </div>
+                <div class="whosTurn">
+                    <div class="xTurn">YOUR TURN!</div>
+                    <div class="oTurn">YOUR TURN!</div>
+                </div>
+            </div>
+            
+            <div class="main"></div>
+            <div class="restart"></div>
+        </div>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
