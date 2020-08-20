@@ -47,14 +47,17 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 1%;
 }
 
 .gameScreen .top {
-  width: 50%;
+  width: 45%;
 }
 
-.gameScreen .scoreBar {
+.gameScreen .top .scoreBar {
   font-size: 48px;
   width: 100%;
   margin: 0 auto;
@@ -68,7 +71,7 @@ html, body {
   text-align: center;
 }
 
-.gameScreen .scoreBar .x {
+.gameScreen .top .scoreBar .x {
   border-right: solid 4px black;
   color: #fff;
   background-color: #ED494C;
@@ -77,14 +80,14 @@ html, body {
           flex: 1;
 }
 
-.gameScreen .scoreBar .xScore {
+.gameScreen .top .scoreBar .xScore {
   background-color: #fff;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
 }
 
-.gameScreen .scoreBar .vs {
+.gameScreen .top .scoreBar .vs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -99,14 +102,14 @@ html, body {
           flex: 2;
 }
 
-.gameScreen .scoreBar .oScore {
+.gameScreen .top .scoreBar .oScore {
   background-color: #fff;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
 }
 
-.gameScreen .scoreBar .o {
+.gameScreen .top .scoreBar .o {
   border-left: solid 4px black;
   background-color: black;
   color: #fff;
@@ -115,7 +118,7 @@ html, body {
           flex: 1;
 }
 
-.gameScreen .whosTurn {
+.gameScreen .top .whosTurn {
   width: 100%;
   font-size: 20px;
   display: -webkit-box;
@@ -127,15 +130,44 @@ html, body {
   padding-top: 1%;
 }
 
-.gameScreen .whosTurn .xTurn {
+.gameScreen .top .whosTurn .xTurn {
   opacity: 1;
   color: #fff;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
-.gameScreen .whosTurn .oTurn {
+.gameScreen .top .whosTurn .oTurn {
   opacity: 1;
   color: #fff;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.gameScreen .main {
+  width: 50%;
+  height: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.gameScreen .main .block {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 33.3333%;
+  font-size: 96px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.gameScreen .restart {
+  width: 45%;
+  background-color: #ED494C;
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+  padding: 1% 0;
+  border-radius: 8px;
   font-family: 'Roboto Condensed', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
