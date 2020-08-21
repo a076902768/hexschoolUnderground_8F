@@ -47,6 +47,8 @@ html,body{
             display: flex;
             text-align: center;
             .x{
+                display: flex;
+                align-items: center;
                 border-right: solid 4px black;
                 color: #fff;
                 background-color: #ED494C;
@@ -69,6 +71,8 @@ html,body{
                 flex: 3;
             }
             .o{
+                display: flex;
+                align-items: center;
                 border-left: solid 4px black;
                 background-color: black;
                 color: #fff;
@@ -100,10 +104,14 @@ html,body{
         flex-wrap: wrap;
         .block{
             box-sizing: border-box;
-            // border: solid 4px black;
             width: 33.3333%;
+            height: 33.3333%;
             font-size: 96px;
             font-family: 'Roboto Condensed', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
     }
     .restart{

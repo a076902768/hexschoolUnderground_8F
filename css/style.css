@@ -72,6 +72,12 @@ html, body {
 }
 
 .gameScreen .top .scoreBar .x {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-right: solid 4px black;
   color: #fff;
   background-color: #ED494C;
@@ -110,6 +116,12 @@ html, body {
 }
 
 .gameScreen .top .scoreBar .o {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-left: solid 4px black;
   background-color: black;
   color: #fff;
@@ -156,8 +168,22 @@ html, body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 33.3333%;
+  height: 33.3333%;
   font-size: 96px;
   font-family: 'Roboto Condensed', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .gameScreen .restart {

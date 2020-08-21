@@ -19,29 +19,32 @@
         <div class="gameScreen">
             <div class="top">
                 <div class="scoreBar">
-                    <div class="x">X</div>
+                    <div class="x"><i class='fas fa-times' style='color: white;font-size: 40px;margin: 0 auto'></i></div>
                     <div class="xScore">10</div>
                     <div class="vs">
                         <div class="" style="margin: 0 auto">VS</div>
                     </div>
                     <div class="oScore">8</div>
-                    <div class="o">O</div>
+                    <div class="o"><i class='far fa-circle' style="color: white;font-size: 40px;margin: 0 auto"></i></div>
                 </div>
                 <div class="whosTurn">
-                    <div class="xTurn">YOUR TURN!</div>
-                    <div class="oTurn">YOUR TURN!</div>
+                    <div class="xTurn" :style="{'opacity': [nowTurn =='o' ? '0' : '1']}">YOUR TURN!</div>
+                    <div class="oTurn" :style="{'opacity': [nowTurn =='o' ? '1' : '0']}">YOUR TURN!</div>
                 </div>
             </div>
             
             <div class="main">
                 <div 
                 class="block" 
+                :id="['b_'+index]"
                 v-for='(item,index) in mainBlock'
                 :style="{
                     'border-right' : [ index == 0 || index == 1 || index == 3 || index == 4 || index == 6 || index == 7? 'solid 6px #ED494C' : 'none'] ,
                     'border-bottom' : [ index == 0 || index == 1 || index == 2 || index == 3 || index == 4 || index == 5? 'solid 6px #ED494C' : 'none']
                 }"
-                >O</div>
+                @click="blockClick(index)"
+                >
+                </div>
             </div>
             <div class="restart">
                 <div class="">RESTART</div>
