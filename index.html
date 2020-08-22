@@ -32,8 +32,8 @@
                     <div class="oTurn" :style="{'opacity': [nowTurn =='o' ? '1' : '0']}">YOUR TURN!</div>
                 </div>
             </div>
-            
-            <div class="main">
+            <!-- v-if="whoWin !='o' && whoWin !='x' && whoWin !='draw'" -->
+            <div class="main" style="display: none;">
                 <div 
                 class="block" 
                 :id="['b_'+index]"
@@ -46,10 +46,27 @@
                 >
                 </div>
             </div>
+            <!--  -->
+            <div class="oWin" v-if="whoWin == 'o'">
+                <i class='far fa-circle'></i>
+                <div class="winTitle">WINNER!</div>
+            </div>
+             <!-- v-if="whoWin == 'x'" -->
+            <div class="xWin" v-if="whoWin == 'x'">
+                <i class='fas fa-times'></i>
+                <div class="winTitle">WINNER!</div>
+            </div>
+            <!-- v-if="whoWin == 'draw'" -->
+            <div class="draw" >
+                <i class='fas fa-times'></i>
+                <i class='far fa-circle'></i>
+            </div>
             <div class="restart">
                 <div class="">RESTART</div>
             </div>
         </div>
+
+        
     </div>
     <script src="./js/vue.js"></script>
     <script src="./js/script.js"></script>

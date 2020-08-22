@@ -1,3 +1,7 @@
+* {
+  position: relative;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -184,6 +188,34 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.gameScreen .oWin, .gameScreen .xWin {
+  width: 50%;
+  height: 65%;
+}
+
+.gameScreen .oWin i, .gameScreen .xWin i {
+  position: absolute;
+  font-size: 360px;
+  color: #ED494C;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.gameScreen .oWin .winTitle, .gameScreen .xWin .winTitle {
+  position: absolute;
+  font-size: 180px;
+  -webkit-text-stroke: 4px white;
+  color: #FF6D70;
+  font-style: italic;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .gameScreen .restart {

@@ -66,6 +66,7 @@ var app = new Vue({
                 [],
                 []
             ],
+            whoWin: undefined
         }
     },
     methods: {
@@ -101,7 +102,7 @@ var app = new Vue({
             const vm = this;
             let oWin = 'ooo';
             let xWin = 'xxx';
-
+            let isWin = false;
             vm.checkRow[0] = [vm.mainBlock[0].value,vm.mainBlock[1].value,vm.mainBlock[2].value];
             vm.checkRow[1] = [vm.mainBlock[3].value,vm.mainBlock[4].value,vm.mainBlock[5].value];
             vm.checkRow[2] = [vm.mainBlock[6].value,vm.mainBlock[7].value,vm.mainBlock[8].value];
@@ -118,6 +119,8 @@ var app = new Vue({
                vm.checkSlash[0].join('') == oWin || vm.checkSlash[1].join('') == oWin)
             {
                 console.log('circle win!');
+                isWin = true;
+                vm.whoWin = 'o';
                 vm.mainBlock.forEach(element => {
                     element.isClick = true;
                 });
@@ -127,9 +130,23 @@ var app = new Vue({
                vm.checkSlash[0].join('') == xWin || vm.checkSlash[1].join('') == xWin)
             {
                 console.log('X win!');
+                isWin = true;
+                vm.whoWin = 'x';
                 vm.mainBlock.forEach(element => {
                     element.isClick = true;
                 });
+            }
+
+            let haveCleanBlock = false;
+            vm.mainBlock.forEach((item) =>{
+                if(item.isClick == false){
+                    haveCleanBlock = true;
+                }
+            });
+
+            if(isWin == false && haveCleanBlock == false){
+                console.log('draw');
+                vm.whoWin = 'draw';
             }
             
         }
