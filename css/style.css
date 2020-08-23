@@ -206,6 +206,7 @@ html, body {
 }
 
 .gameScreen .oWin .winTitle, .gameScreen .xWin .winTitle {
+  z-index: 10;
   position: absolute;
   font-size: 180px;
   -webkit-text-stroke: 4px white;
@@ -216,6 +217,62 @@ html, body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.gameScreen .draw {
+  width: 50%;
+  height: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gameScreen .draw .drawBlock {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-text-stroke: 4px white;
+  color: #FF6D70;
+  font-style: italic;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.gameScreen .draw .drawBlock .drawTitle {
+  -webkit-box-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  font-size: 150px;
+  text-align: center;
+}
+
+.gameScreen .draw .xblock, .gameScreen .draw .oblock {
+  height: 100%;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gameScreen .draw i {
+  font-size: 180px;
+  color: #ED494C;
+}
+
+.gameScreen .draw .fas.fa-times {
+  font-size: 200px;
 }
 
 .gameScreen .restart {

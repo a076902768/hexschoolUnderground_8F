@@ -129,6 +129,7 @@ html,body{
             transform: translate(-50%,-50%);
         }
         .winTitle{
+            z-index: 10;
             position: absolute;
             font-size: 180px;   
             -webkit-text-stroke: 4px white;
@@ -138,6 +139,43 @@ html,body{
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+        }
+    }
+    .draw{
+        width: 50%;
+        height: 65%;
+        display: flex;
+        .drawBlock{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-text-stroke: 4px white;
+            color: #FF6D70;
+            font-style: italic;
+            font-weight: bold;
+            // border: solid 1px black;
+            display: flex;
+            flex-direction: column;
+            .drawTitle{
+                flex: 3;
+                font-size: 150px;
+                // border: solid 1px black;
+                text-align: center;
+            }
+        }
+        .xblock,.oblock{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        i{  
+            font-size: 180px;
+            color: #ED494C;
+        }
+        .fas.fa-times{
+            font-size: 200px;
         }
     }
     .restart{

@@ -11,12 +11,12 @@
 </head>
 <body> 
     <div id="app">
-        <div class="startScreen" v-if='startScreen' style="display: none;">
+        <div class="startScreen" v-if='startScreen'>
             <div class="button" @click='startGame'>START</div>
         </div>
         <!--  v-if='startScreen == false && gameScreen' -->
         
-        <div class="gameScreen">
+        <div class="gameScreen" v-if='startScreen == false && gameScreen'>
             <div class="top">
                 <div class="scoreBar">
                     <div class="x"><i class='fas fa-times' style='color: white;font-size: 40px;margin: 0 auto'></i></div>
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <!-- v-if="whoWin !='o' && whoWin !='x' && whoWin !='draw'" -->
-            <div class="main" style="display: none;">
+            <div class="main" v-if="whoWin !='o' && whoWin !='x' && whoWin !='draw'">
                 <div 
                 class="block" 
                 :id="['b_'+index]"
@@ -57,9 +57,19 @@
                 <div class="winTitle">WINNER!</div>
             </div>
             <!-- v-if="whoWin == 'draw'" -->
-            <div class="draw" >
-                <i class='fas fa-times'></i>
-                <i class='far fa-circle'></i>
+            <div class="draw" v-if="whoWin == 'draw'">
+                
+                <div class="xblock">
+                    <div class=""> <i class='fas fa-times'></i> </div>
+                </div>
+                <div class="oblock">
+                    <div class=""><i class='far fa-circle'></i></div>               
+                </div> 
+                <div class="drawBlock">
+                    <div class="drawTitle">DRAW!</div>
+                    <div class="drawTitle">DRAW!</div>
+                    <div class="drawTitle">DRAW!</div>
+                </div>
             </div>
             <div class="restart">
                 <div class="">RESTART</div>
