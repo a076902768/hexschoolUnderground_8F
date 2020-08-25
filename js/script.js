@@ -149,6 +149,26 @@ var app = new Vue({
                 vm.whoWin = 'draw';
             }
             
+        },
+        reStart(){
+            const vm = this;
+            vm.startScreen = true;
+            vm.gameScreen = false;
+            vm.nowTurn = 'o';
+            vm.checkRow.forEach((item) =>{
+                item.length=0;
+            });
+            vm.checkCol.forEach((item) =>{
+                item.length=0;
+            });
+            vm.checkSlash.forEach((item) =>{
+                item.length=0;
+            });
+            vm.whoWin = undefined;
+            vm.mainBlock.forEach((item) =>{
+                item.isClick = false;
+                item.value = 0;
+            })
         }
     },
     mounted() {

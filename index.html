@@ -47,17 +47,17 @@
                 </div>
             </div>
             <!--  -->
-            <div class="oWin" v-if="whoWin == 'o'">
+            <div class="oWin" v-show="whoWin == 'o'">
                 <i class='far fa-circle'></i>
                 <div class="winTitle">WINNER!</div>
             </div>
              <!-- v-if="whoWin == 'x'" -->
-            <div class="xWin" v-if="whoWin == 'x'">
+            <div class="xWin" v-show="whoWin == 'x'">
                 <i class='fas fa-times'></i>
                 <div class="winTitle">WINNER!</div>
             </div>
             <!-- v-if="whoWin == 'draw'" -->
-            <div class="draw" v-if="whoWin == 'draw'">
+            <div class="draw" v-show="whoWin == 'draw'">
                 
                 <div class="xblock">
                     <div class=""> <i class='fas fa-times'></i> </div>
@@ -71,7 +71,7 @@
                     <div class="drawTitle">DRAW!</div>
                 </div>
             </div>
-            <div class="restart">
+            <div class="restart" @click='reStart'>
                 <div class="">RESTART</div>
             </div>
         </div>
