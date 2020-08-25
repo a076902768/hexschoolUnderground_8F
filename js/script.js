@@ -66,7 +66,11 @@ var app = new Vue({
                 [],
                 []
             ],
-            whoWin: undefined
+            whoWin: undefined,
+            scoreBar: {
+                oScore: 0,
+                xScore: 0
+            }
         }
     },
     methods: {
@@ -124,6 +128,7 @@ var app = new Vue({
                 vm.mainBlock.forEach(element => {
                     element.isClick = true;
                 });
+                vm.scoreBar.oScore+=1;
             }
             if(vm.checkRow[0].join('') == xWin || vm.checkRow[1].join('') == xWin || vm.checkRow[2].join('') == xWin || 
                vm.checkCol[0].join('') == xWin || vm.checkCol[1].join('') == xWin || vm.checkCol[2].join('') == xWin ||
@@ -135,6 +140,7 @@ var app = new Vue({
                 vm.mainBlock.forEach(element => {
                     element.isClick = true;
                 });
+                vm.scoreBar.xScore+=1;
             }
 
             let haveCleanBlock = false;
@@ -171,8 +177,24 @@ var app = new Vue({
             })
         }
     },
+    watch: {
+        'scoreBar.oScore'(){
+            const vm = this;
+            localStorage.setItem('oScore', vm.scoreBar.oScore);
+            console.log(localStorage.getItem('oScore'));
+        },
+        'scoreBar.xScore'(){
+            const vm = this;
+            localStorage.setItem('xScore', vm.scoreBar.xScore);
+            console.log(localStorage.getItem('xScore'));
+        }
+    },
     mounted() {
         const vm = this;
         vm.checkWin();
+        if(localStorage.getItem('oScore') && localStorage.getItem('xScore')){
+            vm.scoreBar.oScore += Number(localStorage.getItem('oScore'));
+            vm.scoreBar.xScore += Number(localStorage.getItem('xScore'));
+        }
     },
 });

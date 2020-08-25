@@ -16,14 +16,9 @@ html, body {
   width: 100%;
   height: 100%;
   background-color: black;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .startScreen .button {
   margin: 0 auto;
   width: 50%;
@@ -34,185 +29,117 @@ html, body {
   padding: 2% 0;
   letter-spacing: 1px;
   color: #FF6D70;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .gameScreen {
   width: 100%;
   height: 100%;
   background-color: #FF6D70;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   padding-top: 1%;
 }
-
 .gameScreen .top {
   width: 45%;
 }
-
 .gameScreen .top .scoreBar {
   font-size: 48px;
   width: 100%;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   border: solid 4px black;
   border-radius: 8px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   display: flex;
   text-align: center;
 }
-
 .gameScreen .top .scoreBar .x {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-right: solid 4px black;
   color: #fff;
   background-color: #ED494C;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 .gameScreen .top .scoreBar .x i {
   font-size: 40px;
 }
-
 .gameScreen .top .scoreBar .xScore {
   background-color: #fff;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
 }
-
 .gameScreen .top .scoreBar .vs {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 20px;
   background-color: black;
   color: #fff;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  flex: 2;
 }
-
 .gameScreen .top .scoreBar .oScore {
   background-color: #fff;
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
 }
-
 .gameScreen .top .scoreBar .o {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-left: solid 4px black;
   background-color: black;
   color: #fff;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 .gameScreen .top .scoreBar .o i {
   font-size: 40px;
 }
-
 .gameScreen .top .whosTurn {
   width: 100%;
   font-size: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-top: 1%;
 }
-
 .gameScreen .top .whosTurn .xTurn {
   opacity: 1;
   color: #fff;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
-
 .gameScreen .top .whosTurn .oTurn {
   opacity: 1;
   color: #fff;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
-
 .gameScreen .main {
   width: 50%;
   height: 65%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .gameScreen .main .block {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 33.3333%;
   height: 33.3333%;
   font-size: 96px;
-  font-family: 'Roboto Condensed', sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  font-family: "Roboto Condensed", sans-serif;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 .gameScreen .oWin, .gameScreen .xWin {
   width: 50%;
   height: 65%;
 }
-
 .gameScreen .oWin i, .gameScreen .xWin i {
   position: absolute;
   font-size: 360px;
   color: #ED494C;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .gameScreen .oWin .winTitle, .gameScreen .xWin .winTitle {
   z-index: 10;
   position: absolute;
@@ -223,18 +150,13 @@ html, body {
   font-weight: bold;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 .gameScreen .draw {
   width: 50%;
   height: 65%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .gameScreen .draw .drawBlock {
   position: absolute;
   width: 100%;
@@ -243,46 +165,28 @@ html, body {
   color: #FF6D70;
   font-style: italic;
   font-weight: bold;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 .gameScreen .draw .drawBlock .drawTitle {
-  -webkit-box-flex: 3;
-      -ms-flex: 3;
-          flex: 3;
+  flex: 3;
   font-size: 150px;
   text-align: center;
 }
-
 .gameScreen .draw .xblock, .gameScreen .draw .oblock {
   height: 100%;
   width: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .gameScreen .draw i {
   font-size: 180px;
   color: #ED494C;
 }
-
 .gameScreen .draw .fas.fa-times {
   font-size: 200px;
 }
-
 .gameScreen .restart {
   width: 45%;
   background-color: #ED494C;
@@ -291,9 +195,8 @@ html, body {
   text-align: center;
   padding: 1% 0;
   border-radius: 8px;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
 }
-
 @media screen and (max-width: 320px), screen and (max-width: 375px), screen and (max-width: 414px) {
   .gameScreen .top .scoreBar {
     font-size: 24px;
@@ -333,4 +236,3 @@ html, body {
     font-size: 24px;
   }
 }
-/*# sourceMappingURL=style.css.map */

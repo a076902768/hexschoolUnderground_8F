@@ -56,6 +56,9 @@ html,body{
                 color: #fff;
                 background-color: #ED494C;
                 flex: 1;
+                i{
+                    font-size: 40px
+                }
             }
             .xScore{
                 background-color: #fff;
@@ -80,6 +83,9 @@ html,body{
                 background-color: black;
                 color: #fff;
                 flex: 1;
+                i{
+                    font-size: 40px
+                }
             }
         }
         .whosTurn{
@@ -188,5 +194,51 @@ html,body{
         border-radius: 8px;
         font-family: 'Roboto Condensed', sans-serif;
     }
-    
+    @media screen and (max-width: 320px),screen and (max-width: 375px),screen and (max-width: 414px){
+        .top{
+            .scoreBar{
+                font-size: 24px;
+                .x,.o{
+                   i{
+                       font-size: 24px;
+                   } 
+                }
+            }
+            .whosTurn{
+                font-size: 13px;
+            }
+        }
+        .main{
+            width: 75%;
+            height: 55%;
+            .block{
+                font-size: 65px;
+            }
+        }
+        .oWin,.xWin{
+            i{
+                font-size: 200px;
+            }
+            .winTitle{
+                font-size: 65px;   
+            }
+        }
+        .draw{
+            .fas.fa-times{
+                font-size: 120px;
+            }
+            .far.fa-circle{
+                font-size: 85px;
+            }
+            .drawBlock{
+                margin-top: 20%;
+                .drawTitle{
+                    font-size: 55px;
+                }
+            }
+        }
+        .restart{
+            font-size: 24px;
+        }
+    }
 }

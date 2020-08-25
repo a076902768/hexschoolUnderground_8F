@@ -19,13 +19,13 @@
         <div class="gameScreen" v-if='startScreen == false && gameScreen'>
             <div class="top">
                 <div class="scoreBar">
-                    <div class="x"><i class='fas fa-times' style='color: white;font-size: 40px;margin: 0 auto'></i></div>
-                    <div class="xScore">10</div>
+                    <div class="x"><i class='fas fa-times' style='color: white;margin: 0 auto'></i></div>
+                    <div class="xScore">{{scoreBar.xScore}}</div>
                     <div class="vs">
                         <div class="" style="margin: 0 auto">VS</div>
                     </div>
-                    <div class="oScore">8</div>
-                    <div class="o"><i class='far fa-circle' style="color: white;font-size: 40px;margin: 0 auto"></i></div>
+                    <div class="oScore">{{scoreBar.oScore}}</div>
+                    <div class="o"><i class='far fa-circle' style="color: white;margin: 0 auto"></i></div>
                 </div>
                 <div class="whosTurn">
                     <div class="xTurn" :style="{'opacity': [nowTurn =='o' ? '0' : '1']}">YOUR TURN!</div>
