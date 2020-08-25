@@ -61,7 +61,7 @@ html, body {
   align-items: center;
   border-right: solid 4px black;
   color: #fff;
-  background-color: #ED494C;
+  background-color: black;
   flex: 1;
 }
 .gameScreen .top .scoreBar .x i {
@@ -87,7 +87,7 @@ html, body {
   display: flex;
   align-items: center;
   border-left: solid 4px black;
-  background-color: black;
+  background-color: #ED494C;
   color: #fff;
   flex: 1;
 }

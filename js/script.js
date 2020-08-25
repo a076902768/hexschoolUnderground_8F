@@ -84,6 +84,8 @@ var app = new Vue({
             let b_id = 'b_'+index; 
             console.log(index);
             let block = document.getElementById(b_id);
+            let xStyle = document.getElementById('x');
+            let oStyle = document.getElementById('o');
             let o = "<i class='far fa-circle'></i>";
             let x = "<i class='fas fa-times' style='color: white'></i>";
             if(vm.mainBlock[index].isClick == false){
@@ -91,10 +93,18 @@ var app = new Vue({
                     block.innerHTML+=o;
                     vm.mainBlock[index].value = 'o';
                     vm.nowTurn = 'x';
+                    xStyle.style.backgroundColor='#ED494C';
+                    xStyle.style.color='white';
+                    oStyle.style.backgroundColor='#000000';
+                    oStyle.style.color='white';
                 }else{
                     block.innerHTML+=x;
                     vm.mainBlock[index].value = 'x';
                     vm.nowTurn = 'o';
+                    oStyle.style.backgroundColor='#ED494C';
+                    oStyle.style.color='white';
+                    xStyle.style.backgroundColor='#000000';
+                    xStyle.style.color='white';
                 }
                 vm.mainBlock[index].isClick = true;
             }
