@@ -192,13 +192,14 @@ var app = new Vue({
     mounted() {
         const vm = this;
         vm.checkWin();
-        if(localStorage.getItem('oScore') && localStorage.getItem('xScore')){
-            console.log('yes have data');
-            console.log(Number(localStorage.getItem('oScore')),Number(localStorage.getItem('xScore')));
-            vm.scoreBar.oScore += Number(localStorage.getItem('oScore'));
-            vm.scoreBar.xScore += Number(localStorage.getItem('xScore'));
-        }else{
-            console.log('no data');
+        if(!Number(localStorage.getItem('oScore'))){
+            vm.scoreBar.oScore = 0;
         }
+        if(!Number(localStorage.getItem('xScore'))){
+            vm.scoreBar.xScore = 0;
+        }
+        console.log(Number(localStorage.getItem('oScore')),Number(localStorage.getItem('xScore')));
+        vm.scoreBar.oScore += Number(localStorage.getItem('oScore'));
+        vm.scoreBar.xScore += Number(localStorage.getItem('xScore'));
     },
 });
